@@ -3,10 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "babel-eslint": "^10.0.3",
-    "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-standard": "^4.0.1",
+    "eslint-plugin-react": "^7.14.3",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-scripts": "3.1.1"
@@ -18,7 +15,12 @@
     "eject": "react-scripts eject",
     "lint": "eslint src",
     "lint:fix": "eslint --fix src",
-    "prettier": "prettier --write --no-semi --single-quote \"src/**/*.js\""
+    "prettier": "prettier --write \"**/*.+(js|jsx|json|css|md)\""
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn run prettier && yarn run lint"
+    }
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -36,13 +38,10 @@
     ]
   },
   "devDependencies": {
-    "eslint": "6.1.0",
-    "eslint-config-airbnb": "18.0.1",
-    "eslint-config-standard": "^14.1.0",
-    "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-node": "^10.0.0",
-    "eslint-plugin-react": "^7.14.3",
-    "eslint-plugin-react-hooks": "^1.7.0",
+    "eslint": "^6.1.0",
+    "eslint-config-prettier": "^6.2.0",
+    "eslint-config-recommended": "^4.0.0",
+    "eslint-plugin-prettier": "^3.1.0",
     "prettier": "1.18.2"
   }
 }
