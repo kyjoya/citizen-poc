@@ -5,5 +5,5 @@ branches:
   only:
     - master
 script:
-  - "yarn run prettier"
   - "yarn run lint"
+  - "yarn run test"
